@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Avenest Realty — Interior Design & Premium Property Advisory</title>
+    <meta name="description" content="Single page real estate and interior design website template for premium homes, property showcases, consultations, and high-converting inquiries." />
+    <meta name="theme-color" content="#3A1F1A" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-lg container py-3" aria-label="Primary navigation">
+        <a class="navbar-brand d-inline-flex align-items-center gap-2" href="#home" aria-label="Avenest home">
+          <span class="brand-mark">A</span>
+          <span>Avenest</span>
+        </a>
+
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navMain" aria-controls="navMain" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navMain">
+          <ul class="navbar-nav ms-auto align-items-lg-center nav-menu-spaced">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#properties">Properties</a></li>
+            <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+            <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+            <li class="nav-item ms-lg-2"><a class="btn-estate btn-estate-primary" href="#contact">Book Consultation</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+    <main>
+      <section class="hero-estate" id="home">
+        <div class="container">
+          <div class="hero-panel reveal">
+            <span class="eyebrow text-white mb-3">Premium Real Estate & Interior Direction</span>
+            <h1 class="display-title mb-4">Buy, Sell & Style Spaces With Confidence</h1>
+            <p class="lead-text mb-4">
+              A boutique property and interior design team helping clients discover beautiful homes,
+              improve resale value, and create elevated living experiences.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#properties" class="btn-estate btn-estate-primary">View Properties</a>
+              <a href="#contact" class="btn-estate btn-estate-outline">Request Consultation</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="hero-search" aria-label="Property search">
+        <div class="container">
+          <div class="search-panel reveal">
+            <form class="row g-3 align-items-end">
+              <div class="col-md-3">
+                <label class="form-label fw-bold" for="location">Location</label>
+                <input id="location" class="form-control" type="text" placeholder="Miami, FL" />
+              </div>
+              <div class="col-md-3">
+                <label class="form-label fw-bold" for="typeValue">Property Type</label>
+
+                <div class="custom-select" data-custom-select>
+                  <button class="custom-select-toggle" type="button" aria-expanded="false">
+                    <span id="typeValue">Luxury Apartment</span>
+                    <svg class="custom-select-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </button>
+
+                  <div class="custom-select-menu">
+                    <button type="button" class="custom-select-option active" data-value="Luxury Apartment">Luxury Apartment</button>
+                    <button type="button" class="custom-select-option" data-value="Family Residence">Family Residence</button>
+                    <button type="button" class="custom-select-option" data-value="Villa Estate">Villa Estate</button>
+                    <button type="button" class="custom-select-option" data-value="Commercial Space">Commercial Space</button>
+                  </div>
+
+                  <input type="hidden" name="property_type" value="Luxury Apartment" />
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <label class="form-label fw-bold" for="budgetValue">Budget</label>
+
+                <div class="custom-select" data-custom-select>
+                  <button class="custom-select-toggle" type="button" aria-expanded="false">
+                    <span id="budgetValue">$750k - $1.5M</span>
+                    <svg class="custom-select-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="m6 9 6 6 6-6" />
+                    </svg>
+                  </button>
+
+                  <div class="custom-select-menu">
+                    <button type="button" class="custom-select-option active" data-value="$750k - $1.5M">$750k - $1.5M</button>
+                    <button type="button" class="custom-select-option" data-value="$1.5M - $3M">$1.5M - $3M</button>
+                    <button type="button" class="custom-select-option" data-value="$3M - $5M">$3M - $5M</button>
+                    <button type="button" class="custom-select-option" data-value="$5M+">$5M+</button>
+                  </div>
+
+                  <input type="hidden" name="budget" value="$750k - $1.5M" />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <button class="btn-estate btn-estate-primary w-100" type="submit">Find Match</button>
+              </div>
+            </form>
+          </div>
+
+          <div class="trust-strip">
+            <div class="row g-3">
+              <div class="col-md-3 col-6"><div class="trust-badge reveal"><span class="pill-badge">01</span><strong>Licensed Advisors</strong></div></div>
+              <div class="col-md-3 col-6"><div class="trust-badge reveal"><span class="pill-badge">02</span><strong>Verified Listings</strong></div></div>
+              <div class="col-md-3 col-6"><div class="trust-badge reveal"><span class="pill-badge">03</span><strong>Staging Experts</strong></div></div>
+              <div class="col-md-3 col-6"><div class="trust-badge reveal"><span class="pill-badge">04</span><strong>Investor Ready</strong></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-lg" id="about">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+              <div class="image-stack reveal">
+                <img class="main-img" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1100&q=80" alt="Warm luxury living room with curated interior design" loading="lazy" />
+                <img class="small-img float-soft" src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=900&q=80" alt="Modern real estate consultation with architectural plans" loading="lazy" />
+              </div>
+            </div>
+            <div class="col-lg-6 reveal">
+              <span class="eyebrow mb-3">About Avenest</span>
+              <h2 class="section-title mb-4">Reliable property strategy for better living.</h2>
+              <p class="lead-text mb-4">
+                We combine market intelligence, refined interior styling, and white-glove client
+                guidance to help every property decision feel clear, profitable, and beautifully
+                executed.
+              </p>
+              <div class="row g-3 mb-4">
+                <div class="col-sm-6"><div class="metric"><strong>14+</strong><span>Years Experience</span></div></div>
+                <div class="col-sm-6"><div class="metric"><strong>98%</strong><span>Client Satisfaction</span></div></div>
+              </div>
+              <a class="btn-estate btn-estate-primary" href="#contact">Meet an Advisor</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="services">
+        <div class="container">
+          <div class="row align-items-end mb-5">
+            <div class="col-lg-7 reveal">
+              <span class="eyebrow mb-3">Complete Showcase Services</span>
+              <h2 class="section-title mb-0">From acquisition to interior presentation.</h2>
+            </div>
+            <div class="col-lg-5 reveal">
+              <p class="lead-text mb-0">A conversion-ready service system for buyers, sellers, landlords, and interior-focused real estate brands.</p>
+            </div>
+          </div>
+
+          <div class="row g-luxury">
+            <div class="col-md-6 col-lg-3 reveal">
+              <article class="service-card p-4">
+                <span class="card-icon mb-4">⌂</span>
+                <h3 class="h5">Buyer Advisory</h3>
+                <p class="text-muted-2 mb-0">Shortlist homes, negotiate terms, and protect your purchase with expert guidance.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3 reveal">
+              <article class="service-card p-4">
+                <span class="card-icon mb-4">◆</span>
+                <h3 class="h5">Property Selling</h3>
+                <p class="text-muted-2 mb-0">Position your listing with pricing strategy, media direction, and launch planning.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3 reveal">
+              <article class="service-card p-4">
+                <span class="card-icon mb-4">✦</span>
+                <h3 class="h5">Interior Styling</h3>
+                <p class="text-muted-2 mb-0">Create warm, editorial spaces that improve perceived value and buyer confidence.</p>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-3 reveal">
+              <article class="service-card p-4">
+                <span class="card-icon mb-4">↗</span>
+                <h3 class="h5">Investment Review</h3>
+                <p class="text-muted-2 mb-0">Compare location advantages, rental potential, and long-term appreciation signals.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-lg" id="properties">
+        <div class="container">
+          <div class="text-center mx-auto mb-5 reveal" style="max-width: 760px">
+            <span class="eyebrow mb-3">Curated Portfolio</span>
+            <h2 class="section-title mb-3">Premium properties chosen just for you.</h2>
+            <p class="lead-text">Elegant layouts, high-quality visual cards, pricing emphasis, and benefit-led property details.</p>
+          </div>
+
+          <div class="row g-luxury">
+            <div class="col-lg-4 reveal">
+              <article class="property-card">
+                <img src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=900&q=80" alt="Modern family residence exterior" loading="lazy" />
+                <div class="p-4">
+                  <div class="d-flex justify-content-between gap-3 mb-2"><h3 class="h5 mb-0">Maplewood Family Residence</h3><span class="property-price">$820,000</span></div>
+                  <p class="text-muted-2">4 beds · 3 baths · Garden lounge · Warm interiors</p>
+                  <a class="btn-estate btn-estate-outline w-100" href="#contact">Schedule Viewing</a>
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-4 reveal">
+              <article class="property-card">
+                <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80" alt="Luxury apartment interior with city style" loading="lazy" />
+                <div class="p-4">
+                  <div class="d-flex justify-content-between gap-3 mb-2"><h3 class="h5 mb-0">Oceanview City Apartment</h3><span class="property-price">$690,000</span></div>
+                  <p class="text-muted-2">2 beds · 2 baths · Concierge · Designer kitchen</p>
+                  <a class="btn-estate btn-estate-outline w-100" href="#contact">Schedule Viewing</a>
+                </div>
+              </article>
+            </div>
+            <div class="col-lg-4 reveal">
+              <article class="property-card">
+                <img src="https://images.unsplash.com/photo-1600047509358-9dc75507daeb?auto=format&fit=crop&w=900&q=80" alt="Villa with outdoor living area" loading="lazy" />
+                <div class="p-4">
+                  <div class="d-flex justify-content-between gap-3 mb-2"><h3 class="h5 mb-0">Serenity Villa Estate</h3><span class="property-price">$1,450,000</span></div>
+                  <p class="text-muted-2">5 beds · Pool · Private terrace · Investment area</p>
+                  <a class="btn-estate btn-estate-outline w-100" href="#contact">Schedule Viewing</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section video-section">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5 reveal">
+              <span class="eyebrow text-white mb-3">Property Film</span>
+              <h2 class="section-title mb-4 text-white">Experience the feeling before the viewing.</h2>
+              <p class="lead-text mb-4 text-white-50">Embed walkthroughs, neighborhood films, or brand videos directly in the page to raise engagement and trust.</p>
+              <a class="btn-estate btn-estate-primary" href="#contact">Start Your Journey</a>
+            </div>
+            <div class="col-lg-7 reveal">
+              <div class="video-frame ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Property showcase video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-lg" id="process">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-5 reveal">
+              <span class="eyebrow mb-3">How We Work</span>
+              <h2 class="section-title mb-4">A guided process for confident decisions.</h2>
+              <p class="lead-text">Clear stages reduce anxiety, improve lead trust, and help visitors understand what happens after they inquire.</p>
+            </div>
+            <div class="col-lg-7">
+              <div class="row g-luxury">
+                <div class="col-md-6 reveal"><div class="location-card p-4"><span class="pill-badge mb-3">Step 01</span><h3 class="h5">Discovery Call</h3><p class="text-muted-2 mb-0">Define budget, lifestyle, design taste, timeline, and investment goals.</p></div></div>
+                <div class="col-md-6 reveal"><div class="location-card p-4"><span class="pill-badge mb-3">Step 02</span><h3 class="h5">Curated Shortlist</h3><p class="text-muted-2 mb-0">Receive properties and styling opportunities matched to your priorities.</p></div></div>
+                <div class="col-md-6 reveal"><div class="location-card p-4"><span class="pill-badge mb-3">Step 03</span><h3 class="h5">Tour & Negotiate</h3><p class="text-muted-2 mb-0">Visit, compare, negotiate, and move forward with strategic confidence.</p></div></div>
+                <div class="col-md-6 reveal"><div class="location-card p-4"><span class="pill-badge mb-3">Step 04</span><h3 class="h5">Style & Settle</h3><p class="text-muted-2 mb-0">Interior recommendations, staging plans, and smooth closing support.</p></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-muted" id="testimonials">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5 reveal">
+              <span class="eyebrow mb-3">Trusted Feedback</span>
+              <h2 class="section-title mb-4">Clients trust us with the details that matter.</h2>
+              <div class="metric mb-3"><strong>4.9★</strong><span>Average client rating</span></div>
+              <div class="metric"><strong>$96M+</strong><span>Property value represented</span></div>
+            </div>
+
+            <div class="col-lg-7 reveal">
+              <div
+                id="testimonialCarousel"
+                class="carousel slide carousel-fade testimonial-carousel"
+                data-bs-ride="carousel"
+                data-bs-interval="4500"
+                data-bs-pause="hover"
+              >
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="testimonial-card">
+                      <div class="quote-mark">“</div>
+                      <p class="lead-text mb-4">
+                        Avenest helped us understand the market, select the right home, and style the
+                        interiors before move-in. The experience felt premium from the first call.
+                      </p>
+                      <div class="d-flex align-items-center gap-3">
+                        <img
+                          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80"
+                          class="rounded-circle testimonial-avatar"
+                          width="62"
+                          height="62"
+                          alt="Client portrait"
+                          loading="lazy"
+                        />
+                        <div>
+                          <strong>Marina Bennett</strong>
+                          <div class="stars">★★★★★</div>
+                          <span class="client-role">Luxury Apartment Buyer</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <div class="testimonial-card">
+                      <div class="quote-mark">“</div>
+                      <p class="lead-text mb-4">
+                        Their team positioned our property beautifully, handled the buyer conversations,
+                        and helped us close faster than expected with a stronger final offer.
+                      </p>
+                      <div class="d-flex align-items-center gap-3">
+                        <img
+                          src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80"
+                          class="rounded-circle testimonial-avatar"
+                          width="62"
+                          height="62"
+                          alt="Client portrait"
+                          loading="lazy"
+                        />
+                        <div>
+                          <strong>Daniel Carter</strong>
+                          <div class="stars">★★★★★</div>
+                          <span class="client-role">Property Seller</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <div class="testimonial-card">
+                      <div class="quote-mark">“</div>
+                      <p class="lead-text mb-4">
+                        The investment review was clear, practical, and very professional. We felt guided
+                        at every step, from location analysis to interior upgrade planning.
+                      </p>
+                      <div class="d-flex align-items-center gap-3">
+                        <img
+                          src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=160&q=80"
+                          class="rounded-circle testimonial-avatar"
+                          width="62"
+                          height="62"
+                          alt="Client portrait"
+                          loading="lazy"
+                        />
+                        <div>
+                          <strong>Sophia Morgan</strong>
+                          <div class="stars">★★★★★</div>
+                          <span class="client-role">Real Estate Investor</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="testimonial-carousel-controls">
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide="prev"
+                    aria-label="Previous testimonial"
+                  >
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  </button>
+
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide-to="0"
+                      class="active"
+                      aria-current="true"
+                      aria-label="Testimonial 1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide-to="1"
+                      aria-label="Testimonial 2"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#testimonialCarousel"
+                      data-bs-slide-to="2"
+                      aria-label="Testimonial 3"
+                    ></button>
+                  </div>
+
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#testimonialCarousel"
+                    data-bs-slide="next"
+                    aria-label="Next testimonial"
+                  >
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-banner mt-5 reveal">
+            <div class="row align-items-center g-4">
+              <div class="col-lg-8">
+                <span class="eyebrow text-white mb-3">Ready to Move?</span>
+                <h2 class="section-title text-white mb-0">
+                  Find your dream property with a team that understands value and style.
+                </h2>
+              </div>
+              <div class="col-lg-4 text-lg-end">
+                <a class="btn-estate btn-estate-primary" href="#contact">Request Property Match</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-lg">
+        <div class="container">
+          <div class="row g-5 align-items-start">
+            <div class="col-lg-5 reveal">
+              <span class="eyebrow mb-3">Latest Insights</span>
+              <h2 class="section-title mb-4">Property and interior design notes.</h2>
+              <p class="lead-text">Use this blog preview to support SEO, educate leads, and increase trust before inquiry.</p>
+            </div>
+            <div class="col-lg-7">
+              <div class="row g-luxury">
+                <div class="col-md-6 reveal"><article class="blog-card"><img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=700&q=80" alt="Luxury kitchen design" loading="lazy" /><div class="p-4"><h3 class="h5">Design details that increase buyer confidence</h3><p class="text-muted-2 mb-0">Staging and finish decisions that make a property feel premium.</p></div></article></div>
+                <div class="col-md-6 reveal"><article class="blog-card"><img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=700&q=80" alt="Modern home exterior" loading="lazy" /><div class="p-4"><h3 class="h5">How to compare lifestyle locations</h3><p class="text-muted-2 mb-0">Look beyond price and evaluate access, rental demand, and comfort.</p></div></article></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-panel" id="contact">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5 reveal">
+              <span class="eyebrow mb-3">Contact Us</span>
+              <h2 class="section-title mb-4">Property assistance starts here.</h2>
+              <p class="lead-text mb-4">Tell us what you want to buy, sell, rent, stage, or style. We will respond with a focused next step.</p>
+              <div class="d-grid gap-3">
+                <div class="trust-badge"><span class="card-icon">☎</span><strong>+1 (555) 014-8920</strong></div>
+                <div class="trust-badge"><span class="card-icon">✉</span><strong>hello@avenest.example</strong></div>
+              </div>
+            </div>
+            <div class="col-lg-7 reveal">
+              <form class="form-card">
+                <div class="row g-3">
+                  <div class="col-md-6"><label class="form-label fw-bold">Full Name</label><input class="form-control" type="text" placeholder="Your name" /></div>
+                  <div class="col-md-6"><label class="form-label fw-bold">Email</label><input class="form-control" type="email" placeholder="you@example.com" /></div>
+                  <div class="col-md-6"><label class="form-label fw-bold">Phone</label><input class="form-control" type="tel" placeholder="+1 555 000 0000" /></div>
+                  <div class="col-md-6">
+                    <label class="form-label fw-bold" for="interestValue">Interest</label>
+
+                    <div class="custom-select contact-custom-select" data-custom-select>
+                      <button class="custom-select-toggle" type="button" aria-expanded="false">
+                        <span id="interestValue">Buying a Property</span>
+                        <svg
+                          class="custom-select-icon"
+                          viewBox="0 0 24 24"
+                          width="18"
+                          height="18"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.4"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path d="m6 9 6 6 6-6" />
+                        </svg>
+                      </button>
+
+                      <div class="custom-select-menu">
+                        <button type="button" class="custom-select-option active" data-value="Buying a Property">
+                          Buying a Property
+                        </button>
+                        <button type="button" class="custom-select-option" data-value="Selling a Property">
+                          Selling a Property
+                        </button>
+                        <button type="button" class="custom-select-option" data-value="Interior Styling">
+                          Interior Styling
+                        </button>
+                        <button type="button" class="custom-select-option" data-value="Investment Advisory">
+                          Investment Advisory
+                        </button>
+                      </div>
+
+                      <input type="hidden" name="interest" value="Buying a Property" />
+                    </div>
+                  </div>
+                  <div class="col-12"><label class="form-label fw-bold">Message</label><textarea class="form-control" placeholder="Share your timeline, preferred location, and budget."></textarea></div>
+                  <div class="col-12"><button class="btn-estate btn-estate-primary" type="submit">Send Inquiry</button></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-subscribe mb-5">
+          <div class="row g-3 align-items-center">
+            <div class="col-lg-7">
+              <h3 class="h4 mb-1">Subscribe for luxury property and design updates.</h3>
+              <p class="mb-0">New listings, market notes, and interior inspiration delivered monthly.</p>
+            </div>
+            <div class="col-lg-5">
+              <form class="d-flex gap-2">
+                <input class="form-control" type="email" placeholder="Email address" aria-label="Email address" />
+                <button class="btn-estate btn-estate-primary" type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <h3 class="h4">Avenest</h3>
+            <p>Premium real estate advisory and interior design direction for buyers, sellers, investors, and refined living spaces.</p>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h4 class="h6">Navigate</h4>
+            <a class="footer-link" href="#about">About</a>
+            <a class="footer-link" href="#services">Services</a>
+            <a class="footer-link" href="#properties">Properties</a>
+            <a class="footer-link" href="#contact">Contact</a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <h4 class="h6">Services</h4>
+            <a class="footer-link" href="#services">Property Buying</a>
+            <a class="footer-link" href="#services">Home Staging</a>
+            <a class="footer-link" href="#services">Interior Styling</a>
+            <a class="footer-link" href="#services">Investment Advisory</a>
+          </div>
+          <div class="col-lg-3">
+            <h4 class="h6">Contact</h4>
+            <p class="mb-1">hello@avenest.example</p>
+            <p class="mb-1">+1 (555) 014-8920</p>
+            <p class="mb-0">Brickell Avenue, Miami, FL</p>
+          </div>
+        </div>
+
+        <div class="footer-bottom d-flex flex-wrap justify-content-between gap-3">
+          <p class="mb-0 small">&copy; <span id="year"></span> Avenest Realty. All rights reserved.</p>
+          <p class="mb-0 small">Single page template by <a href="https://gecdesigns.com" target="_blank" rel="noopener noreferrer">GEC Designs</a>.</p>
+        </div>
+      </div>
+      <!-- Scripts Partial -->
+      <script src="./assets/js/vendor/bootstrap.bundle.min.js" defer></script>
+      <script src="./assets/js/main.js" defer></script>
+
+    </footer>
+
+  </body>
+</html>
