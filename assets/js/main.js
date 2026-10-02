@@ -60,12 +60,7 @@
     });
 
     var serviceSummaries = {
-      "government-liaison": ["7 - 15 Working Days", "Basic property documents", "NRI Owners, Investors, Families"],
-      "tenant-management": ["2 - 4 Weeks to occupy", "Ownership proof, ID", "Absentee Owners, Investors"],
-      "farm-management": ["Ongoing, monthly cycle", "Land ownership proof", "NRI Landowners, Farm Investors"],
-      "buying-selling": ["4 - 8 Weeks typical", "ID proof, budget brief", "Buyers, Sellers, Investors"],
       "property-valuation": ["5 - 7 Working Days", "Basic property documents", "Sellers, Buyers, Legal Use"],
-      "construction-remodeling": ["Project-based timeline", "Site plan, ownership proof", "Owners Building or Renovating"]
     };
 
     Object.keys(serviceSummaries).forEach(function (serviceId) {
@@ -86,6 +81,17 @@
       consultation.textContent = "GET CONSULTATION";
       if (summary) summary.after(consultation);
       else if (process) process.after(consultation);
+    });
+
+    ["details-building-plot-approval", "details-construction-services"].forEach(function (panelId) {
+      var panel = document.getElementById(panelId);
+      if (!panel) return;
+      var process = panel.querySelector(".service-process");
+      var consultation = document.createElement("a");
+      consultation.className = "btn-estate btn-estate-primary service-consult";
+      consultation.href = "#contact";
+      consultation.textContent = "GET CONSULTATION";
+      if (process) process.after(consultation);
     });
 
     document.querySelectorAll('a[href^="#"]').forEach(function (link) {

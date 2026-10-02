@@ -14176,6 +14176,26 @@ textarea {
     font-weight: 700;
 }
 
+.footer-contact-lead {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    gap: .3rem;
+    margin: .35rem 0;
+    color: hsla(0, 0%, 100%, .68);
+    font-size: .76rem;
+    line-height: 1.45;
+    white-space: nowrap;
+}
+
+.footer-contact-lead-secondary {
+    margin-top: .9rem;
+}
+
+.footer-contact-lead strong {
+    color: #fff;
+    font-size: .82rem;
+}
 .footer-contact-detail {
     display: flex;
     align-items: baseline;
@@ -14186,6 +14206,42 @@ textarea {
 .footer-contact-detail > span {
     flex: 0 0 1rem;
     color: var(--color-secondary-300);
+}
+
+.footer-contact-detail > span svg {
+    display: block;
+    height: 17px;
+    width: 17px;
+}
+
+.footer-social-links {
+    display: flex;
+    gap: .75rem;
+    margin-top: 1.35rem;
+}
+
+.footer-social-links a {
+    align-items: center;
+    border: 1px solid rgba(197, 129, 74, .58);
+    border-radius: 50%;
+    color: #c5814a;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    transition: background var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+    width: 48px;
+}
+
+.footer-social-links a:hover,
+.footer-social-links a:focus-visible {
+    background: #c5814a;
+    color: var(--color-dark);
+    transform: translateY(-2px);
+}
+
+.footer-social-links svg {
+    height: 21px;
+    width: 21px;
 }
 
 .contact-detail-link {
@@ -14266,7 +14322,7 @@ textarea {
 
 .hero-estate {
     align-items: center;
-    background: linear-gradient(90deg, rgba(58, 31, 26, .94), rgba(107, 47, 37, .66) 48%, rgba(58, 31, 26, .15)), url(../image/background-image.png) 50%/cover no-repeat;
+    background: linear-gradient(90deg, rgba(29, 41, 50, .84), rgba(29, 41, 50, .48) 48%, rgba(29, 41, 50, .16)), url("../image/background-image.png") center 54%/cover no-repeat;
     display: flex;
     min-height: 100vh;
     overflow: hidden;
@@ -14485,6 +14541,11 @@ textarea {
     line-height: 1.65;
 }
 
+.contact-card-icon svg {
+    height: 23px;
+    width: 23px;
+}
+
 .urgency-picker {
     min-width: 0;
     margin: 1.6rem 0 1.4rem;
@@ -14666,7 +14727,11 @@ textarea {
     width: 40px;
     height: 40px;
     border-radius: 10px;
-    font-size: 1.1rem;
+}
+
+.direct-contact-icon svg {
+    height: 21px;
+    width: 21px;
 }
 
 .direct-contact small,
@@ -14709,7 +14774,7 @@ textarea {
 .response-step strong {
     padding-top: .15rem;
     color: var(--color-primary-600);
-    font-size: .8rem;
+    font-size: .88rem;
     white-space: nowrap;
 }
 
@@ -15164,6 +15229,32 @@ textarea.form-control {
     padding: 1.2rem
 }
 
+.founder-credentials {
+    align-content: center;
+    background: hsla(0, 0%, 100%, .72);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    display: grid;
+    gap: .55rem;
+    height: 100%;
+    padding: 1.2rem;
+}
+
+.founder-entry { align-items: baseline; display: flex; flex-wrap: nowrap; gap: .4rem; white-space: nowrap }
+
+.founder-credentials strong {
+    color: var(--color-dark);
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.founder-credentials span {
+    color: var(--text-muted);
+    font-size: .66rem;
+    line-height: 1.4;
+}
+
 .metric strong {
     color: var(--color-primary-700);
     display: block;
@@ -15296,6 +15387,10 @@ textarea.form-control {
 .service-highlights ul { display: flex; flex-wrap: wrap; gap: .65rem; list-style: none; margin: 0; padding: 0 }
 .service-highlights li { background: var(--service-accent-soft); border-radius: var(--radius-pill); color: var(--color-primary-700); font-size: .88rem; font-weight: 700; padding: .65rem .95rem }
 .service-process { border-top: 1px solid var(--service-outline); grid-column: 1 / -1; margin-top: .5rem; padding-top: 1.5rem }
+.service-panel-no-side { grid-template-columns: minmax(0, 1fr) }
+.service-panel-no-side .service-check-list { grid-template-columns: repeat(2, minmax(0, 1fr)) }
+.service-approval-panel .service-check-list { grid-template-columns: 1fr }
+.service-project-panel .service-check-list { grid-template-columns: 1fr }
 .service-process h4 { color: var(--service-accent); font-size: .82rem; font-weight: 900; letter-spacing: .12em; margin: 0 0 1rem }
 .service-process ol { counter-reset: service-step; display: grid; gap: .8rem; grid-template-columns: repeat(4,minmax(0,1fr)); list-style: none; margin: 0; padding: 0 }
 .service-process li { background: var(--surface); border: 1px solid rgba(107,47,37,.06); border-radius: var(--radius-sm); counter-increment: service-step; display: grid; gap: .45rem; padding: 1rem }
@@ -15387,6 +15482,7 @@ textarea.form-control {
 @media (max-width: 575.98px) {
     .service-explore { left: 1.35rem }
     .service-custom-card { padding: 1.35rem }
+    .service-panel-no-side .service-check-list { grid-template-columns: 1fr }
 }
 
 /* Keep the accordion label and chevron on one centered line; avoid an
