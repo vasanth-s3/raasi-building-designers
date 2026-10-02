@@ -12,6 +12,20 @@
     var year = document.getElementById("year");
     if (year) year.textContent = String(new Date().getFullYear());
 
+    var returnHome = document.querySelector("[data-return-home]");
+    if (returnHome && window.location.protocol !== "file:") {
+      returnHome.value = window.location.origin + "/#home";
+    }
+
+    var backToTop = document.querySelector(".back-to-top");
+    if (backToTop) {
+      var updateBackToTop = function () {
+        backToTop.classList.toggle("is-visible", window.scrollY > 320);
+      };
+      window.addEventListener("scroll", updateBackToTop, { passive: true });
+      updateBackToTop();
+    }
+
     document.querySelectorAll(".service-accordion-trigger").forEach(function (trigger) {
       trigger.addEventListener("click", function () {
         var panelId = trigger.getAttribute("aria-controls");
