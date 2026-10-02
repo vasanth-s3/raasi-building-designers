@@ -13977,21 +13977,61 @@ textarea {
     z-index: 1030
 }
 
-.navbar-brand {
-    color: #fff;
-    font-family: var(--font-heading);
-    font-size: 1.45rem;
-    letter-spacing: -.03em
+.site-header .navbar {
+    padding-bottom: .3rem !important;
+    padding-top: .3rem !important;
 }
 
-.brand-mark {
-    background: linear-gradient(135deg, var(--color-secondary-500), var(--color-primary-500));
+.navbar-brand {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: .65rem;
+    margin-right: 1rem;
+    padding: 0;
+    text-decoration: none;
+}
+
+.brand-symbol {
+    display: block;
+    flex: 0 0 46px;
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
     border-radius: 50%;
+    background: #fff;
+}
+
+.brand-copy {
+    display: flex;
+    flex-direction: column;
+    gap: .28rem;
+    line-height: 1;
+}
+
+.brand-name {
+    color: #f1bd78;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-heading);
+    font-size: 1.18rem;
+    font-weight: 900;
+    letter-spacing: .045em;
+    line-height: .98;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.brand-name span + span {
     color: #fff;
-    display: inline-grid;
-    height: 38px;
-    place-items: center;
-    width: 38px
+}
+
+.brand-tagline {
+    color: rgba(255, 255, 255, .82);
+    font-size: .53rem;
+    font-weight: 700;
+    letter-spacing: .105em;
+    text-transform: uppercase;
 }
 
 .site-header .nav-link {
@@ -14062,6 +14102,22 @@ textarea {
 }
 
 @media (max-width:991.98px) {
+    .brand-symbol {
+        flex-basis: 42px;
+        width: 42px;
+        height: 42px;
+    }
+
+    .brand-name {
+        font-size: 1.02rem;
+        letter-spacing: .035em;
+    }
+
+    .brand-tagline {
+        font-size: .46rem;
+        letter-spacing: .08em;
+    }
+
     .site-header {
         padding: 0 clamp(1rem, 2vw, 1.5rem)
     }
@@ -14086,17 +14142,17 @@ textarea {
 .footer-logo {
     display: inline-flex;
     align-items: center;
-    max-width: 100%;
+    width: min(100%, 320px);
     margin-bottom: 1.1rem;
-    padding: .35rem .7rem;
+    padding: .45rem .65rem;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 9px;
     background: #fff;
 }
 
 .footer-logo img {
     display: block;
-    width: min(100%, 240px);
+    width: 100%;
     height: auto;
 }
 
@@ -14210,7 +14266,7 @@ textarea {
 
 .hero-estate {
     align-items: center;
-    background: linear-gradient(90deg, rgba(58, 31, 26, .94), rgba(107, 47, 37, .66) 48%, rgba(58, 31, 26, .15)), url(https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1800&q=80) 50%/cover no-repeat;
+    background: linear-gradient(90deg, rgba(58, 31, 26, .94), rgba(107, 47, 37, .66) 48%, rgba(58, 31, 26, .15)), url(../image/background-image.png) 50%/cover no-repeat;
     display: flex;
     min-height: 100vh;
     overflow: hidden;
