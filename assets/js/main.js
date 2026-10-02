@@ -12,11 +12,91 @@
     var year = document.getElementById("year");
     if (year) year.textContent = String(new Date().getFullYear());
 
+    var returnHome = document.querySelector("[data-return-home]");
+    if (returnHome && window.location.protocol !== "file:") {
+      returnHome.value = window.location.origin + "/#home";
+    }
+
+    var backToTop = document.querySelector(".back-to-top");
+    if (backToTop) {
+      var updateBackToTop = function () {
+        backToTop.classList.toggle("is-visible", window.scrollY > 320);
+      };
+      window.addEventListener("scroll", updateBackToTop, { passive: true });
+      updateBackToTop();
+    }
+
+    document.querySelectorAll(".service-accordion-trigger").forEach(function (trigger) {
+      trigger.addEventListener("click", function () {
+        var panelId = trigger.getAttribute("aria-controls");
+        var panel = panelId && document.getElementById(panelId);
+        var item = trigger.closest(".service-accordion-item");
+        if (!panel || !item) return;
+
+        var isOpening = trigger.getAttribute("aria-expanded") !== "true";
+        if (isOpening) {
+          document.querySelectorAll(".service-accordion-trigger").forEach(function (otherTrigger) {
+            if (otherTrigger === trigger) return;
+            var otherPanel = document.getElementById(otherTrigger.getAttribute("aria-controls"));
+            var otherItem = otherTrigger.closest(".service-accordion-item");
+            otherTrigger.setAttribute("aria-expanded", "false");
+            if (otherPanel) otherPanel.hidden = true;
+            if (otherItem) otherItem.classList.remove("is-open");
+            var otherAction = otherTrigger.querySelector(".service-accordion-action");
+            if (otherAction) otherAction.innerHTML = 'CLICK TO VIEW DETAILS <span aria-hidden="true">⌄</span>';
+          });
+        }
+        trigger.setAttribute("aria-expanded", isOpening ? "true" : "false");
+        panel.hidden = !isOpening;
+        item.classList.toggle("is-open", isOpening);
+
+        var action = trigger.querySelector(".service-accordion-action");
+        if (action) {
+          action.innerHTML = isOpening
+            ? 'CLICK TO COLLAPSE <span aria-hidden="true">⌃</span>'
+            : 'CLICK TO VIEW DETAILS <span aria-hidden="true">⌄</span>';
+        }
+      });
+    });
+
+    var serviceSummaries = {
+      "government-liaison": ["7 - 15 Working Days", "Basic property documents", "NRI Owners, Investors, Families"],
+      "tenant-management": ["2 - 4 Weeks to occupy", "Ownership proof, ID", "Absentee Owners, Investors"],
+      "farm-management": ["Ongoing, monthly cycle", "Land ownership proof", "NRI Landowners, Farm Investors"],
+      "buying-selling": ["4 - 8 Weeks typical", "ID proof, budget brief", "Buyers, Sellers, Investors"],
+      "property-valuation": ["5 - 7 Working Days", "Basic property documents", "Sellers, Buyers, Legal Use"],
+      "construction-remodeling": ["Project-based timeline", "Site plan, ownership proof", "Owners Building or Renovating"]
+    };
+
+    Object.keys(serviceSummaries).forEach(function (serviceId) {
+      var panel = document.getElementById("details-" + serviceId);
+      if (!panel) return;
+      var summary = panel.querySelector(".service-meta");
+      var process = panel.querySelector(".service-process");
+      if (summary) {
+        var labels = ["Time Required", "Documents Needed", "Ideal For"];
+        summary.innerHTML = serviceSummaries[serviceId].map(function (value, index) {
+          return "<span><b>" + labels[index] + "</b>" + value + "</span>";
+        }).join("");
+        if (process) process.after(summary);
+      }
+      var consultation = document.createElement("a");
+      consultation.className = "btn-estate btn-estate-primary service-consult";
+      consultation.href = "#contact";
+      consultation.textContent = "GET CONSULTATION";
+      if (summary) summary.after(consultation);
+      else if (process) process.after(consultation);
+    });
+
     document.querySelectorAll('a[href^="#"]').forEach(function (link) {
       link.addEventListener("click", function (event) {
         var target = document.querySelector(link.getAttribute("href"));
         if (!target) return;
         event.preventDefault();
+        if (link.classList.contains("service-card")) {
+          var serviceTrigger = target.querySelector(".service-accordion-trigger");
+          if (serviceTrigger && serviceTrigger.getAttribute("aria-expanded") !== "true") serviceTrigger.click();
+        }
         target.scrollIntoView({ behavior: "smooth", block: "start" });
         history.pushState(null, "", link.getAttribute("href"));
         closeMobileNav(link);
