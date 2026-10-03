@@ -14649,6 +14649,17 @@ textarea {
     transition: border-color .2s ease, box-shadow .2s ease;
 }
 
+#brief-service {
+    box-sizing: border-box;
+    display: block;
+    min-width: 0;
+    max-width: 100%;
+    padding-right: 2.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .contact-field textarea {
     min-height: 155px;
     resize: vertical;
@@ -14695,6 +14706,13 @@ textarea {
 
 .contact-info-card > .contact-form-heading {
     margin-bottom: 1.15rem;
+}
+
+.contact-info-title {
+    margin: 0 0 1rem;
+    color: var(--color-dark);
+    font-size: 1.2rem;
+    font-weight: 800;
 }
 
 .direct-contact {
@@ -14756,6 +14774,29 @@ textarea {
 
 .office-contact {
     align-items: flex-start;
+}
+
+.business-hours-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.business-hours-list {
+    display: grid;
+    grid-template-columns: minmax(94px, .85fr) minmax(0, 1.15fr);
+    gap: .2rem .6rem;
+    align-items: baseline;
+}
+
+.business-hours-list > span {
+    color: var(--color-neutral-700);
+    font-size: .86rem;
+    line-height: 1.55;
+}
+
+.business-hours-list > strong {
+    font-size: .86rem;
+    line-height: 1.55;
 }
 
 .response-card .contact-form-heading {
